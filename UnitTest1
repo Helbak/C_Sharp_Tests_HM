@@ -1,0 +1,608 @@
+using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Test_C_Sharp;
+
+namespace UnitTestProject1
+{
+    
+    [TestClass]
+    public class UnitTest1
+    {
+        int[] ara = { 90, 1198, 0, 17, 3, 4, 5 };
+        int[] ara2 = { 1, 1, 1, 1, 1, 100 };
+        int[] ara3 = { 1, 1, 1, 1, 1};
+        int [] araEmpty = {};
+        [TestMethod]
+        public void multiOrPlus_2_3()
+        {
+           
+            int exp = 6;
+            //ForTest ft = new ForTest();
+            int act = ForTest.multiOrPlus(2, 3);
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void multiOrPlus_3_3()
+        {
+             int exp = 6;
+            //ForTest ft = new ForTest();
+            int act = ForTest.multiOrPlus(3, 3);
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void multiOrPlus_min2_3()
+        {
+            
+            int exp = -6;
+            //ForTest ft = new ForTest();
+            int act = ForTest.multiOrPlus(-2, 3);
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void multiOrPlus_0_3()
+        {
+            
+            int exp = 0;
+            //ForTest ft = new ForTest();
+            int act = ForTest.multiOrPlus(0, 3);
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void whereIsPoint_2_2()
+        {
+            int exp = 1;
+            
+            int act = ForTest.whereIsPoint (2, 2);
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void whereIsPoint_2_min2()
+        {
+            int exp = 2;
+            //ForTest ft = new ForTest();
+            int act = ForTest.whereIsPoint(2, -2);
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void whereIsPoint_min2_min2()
+        {
+            int exp = 3;
+            //ForTest ft = new ForTest();
+            int act = ForTest.whereIsPoint(-2, -2);
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void whereIsPoint_min2_2()
+        {
+            int exp = 4;
+            
+            int act = ForTest.whereIsPoint(-2, 2);
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void whereIsPoint_0_2()
+        {
+            int exp = 0;
+          
+            int act = ForTest.whereIsPoint(0, 2);
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void whereIsPoint_2_0()
+        {
+            int exp = 0;
+            
+            int act = ForTest.whereIsPoint(2, 0);
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void whereIsPoint_0_0()
+        {
+            int exp = 0;
+
+            int act = ForTest.whereIsPoint(0, 0);
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void sumOfPositive_0_0_0()
+        {
+            int exp = 0;
+
+            int act = ForTest.sumOfPositive(0, 0, 0);
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void sumOfPositive_2_2_2()
+        {
+            int exp = 6;
+
+            int act = ForTest.sumOfPositive(2,2,2);
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void sumOfPositive_min2_2_2()
+        {
+            int exp = 4;
+
+            int act = ForTest.sumOfPositive(-2, 2, 2);
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void sumOfPositive_min2_min2_2()
+        {
+            int exp = 2;
+
+            int act = ForTest.sumOfPositive(-2, -2, 2);
+            Assert.AreEqual(exp, act);
+        }
+                     
+       
+        [TestMethod]
+        public void sumOfPositive_min2_min2_min2()
+        {
+            int exp = 0;
+            int act = ForTest.sumOfPositive(-2, -2, -2);
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void moreMultiLesPlus_2_2_2()
+        {
+            int exp = 11;
+            int act = ForTest.moreMultiLesPlus(2, 2, 2);
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void moreMultiLesPlus_min2_2_2()
+        {
+            int exp = 5;
+            int act = ForTest.moreMultiLesPlus(-2, 2, 2);
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void moreMultiLesPlus_min2_min2_2()
+        {
+            int exp = 11;
+            int act = ForTest.moreMultiLesPlus(-2, -2, 2);
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void scoringOfStudent_0()
+        {
+            String exp = "F";
+            String act = ForTest.scoringOfStudent(0);
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void scoringOfStudent_9()
+        {
+            String exp = "F";
+            String act = ForTest.scoringOfStudent(9);
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void scoringOfStudent_19()
+        {
+            String exp = "F";
+            String act = ForTest.scoringOfStudent(19);
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void scoringOfStudent_20()
+        {
+            String exp = "E";
+            String act = ForTest.scoringOfStudent(20);
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void scoringOfStudent_30()
+        {
+            String exp = "E";
+            String act = ForTest.scoringOfStudent(30);
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void scoringOfStudent_39()
+        {
+            String exp = "E";
+            String act = ForTest.scoringOfStudent(39);
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void scoringOfStudent_40()
+        {
+            String exp = "E";
+            String act = ForTest.scoringOfStudent(40);
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void scoringOfStudent_50()
+        {
+            String exp = "D";
+            String act = ForTest.scoringOfStudent(50);
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void scoringOfStudent_59()
+        {
+            String exp = "D";
+            String act = ForTest.scoringOfStudent(59);
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void scoringOfStudent_60()
+        {
+            String exp = "C";
+            String act = ForTest.scoringOfStudent(60);
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void scoringOfStudent_70()
+        {
+            String exp = "C";
+            String act = ForTest.scoringOfStudent(70);
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void scoringOfStudent_74()
+        {
+            String exp = "C";
+            String act = ForTest.scoringOfStudent(74);
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void scoringOfStudent_75()
+        {
+            String exp = "B";
+            String act = ForTest.scoringOfStudent(75);
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void scoringOfStudent_85()
+        {
+            String exp = "B";
+            String act = ForTest.scoringOfStudent(85);
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void scoringOfStudent_89()
+        {
+            String exp = "B";
+            String act = ForTest.scoringOfStudent(89);
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void scoringOfStudent_90()
+        {
+            String exp = "A";
+            String act = ForTest.scoringOfStudent(90);
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void scoringOfStudent_95()
+        {
+            String exp = "A";
+            String act = ForTest.scoringOfStudent(95);
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void scoringOfStudent_100()
+        {
+            String exp = "A";
+            String act = ForTest.scoringOfStudent(100);
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void scoringOfStudent_min1()
+        {
+            String exp = "false";
+            String act = ForTest.scoringOfStudent(-1);
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void scoringOfStudent_101()
+        {
+            String exp = "false";
+            String act = ForTest.scoringOfStudent(101);
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void justNumber_13()
+        {
+            Boolean exp = true;
+            Boolean act = ForTest.justNumber(13);
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void justNumber_12()
+        {
+            Boolean exp = false;
+            Boolean act = ForTest.justNumber(12);
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void justNumber_min12()
+        {
+            Boolean exp = false;
+            Boolean act = ForTest.justNumber(-12);
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void justNumber_min13()
+        {
+            Boolean exp = false;
+            Boolean act = ForTest.justNumber(-13);
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void getFactorial_3()
+        {
+            int exp = 6;
+            int act = ForTest.getFactorial(3);
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void getFactorial_0()
+        {
+            int exp = 0;
+            int act = ForTest.getFactorial(0);
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void getFactorial_min3()
+        {
+            int exp = 0;
+            int act = ForTest.getFactorial(-3);
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void backFromArray_ara_min()
+        {            
+            String task = "min";
+            int exp = 0;
+            int act = ForTest.backFromArray(ara, task);
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void backFromArray_ara_max()
+        {
+            String task = "max";
+            int exp = 1198;
+            int act = ForTest.backFromArray(ara, task);
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void backFromArray_ara_indexMax()
+        {
+            String task = "indexMax";
+            int exp = 1;
+            int act = ForTest.backFromArray(ara, task);
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void backFromArray_ara_indexMin()
+        {
+               String task = "indexMin";
+                int exp = 2;
+                int act = ForTest.backFromArray(ara, task);
+                Assert.AreEqual(exp, act);
+        }
+        //sumOfUnevenArray
+        [TestMethod]
+        public void sumOfUnevenArray_ara()
+        {
+            int exp = 102;
+            int act = ForTest.sumOfUnevenArray(ara2);
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void sumOfUnevenArray_araEmpty()
+        {
+            int exp = 0;
+            int act = ForTest.sumOfUnevenArray(araEmpty);
+            Assert.AreEqual(exp, act);
+        }
+
+
+        // reversArray
+        [TestMethod]
+        public void reversArray_ara()
+        {
+            int[] revers = ForTest.reversArray(ara);
+            for (int i = 0; i < ara.Length; i++)
+            {
+                int exp = ara[i];
+                int act = revers[ara.Length - 1 - i];
+                Assert.AreEqual(exp, act);
+            }
+        }
+        //countUnevenElementsOfArray
+        [TestMethod]
+        public void countUnevenElementsOfArray()
+        {
+            int exp = 4;
+            int act = ForTest.countUnevenElementsOfArray(ara);
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void countUnevenElementsOfArray_1()
+        {
+            int exp = 1;
+            int act = ForTest.countUnevenElementsOfArray(ara2);
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void countUnevenElementsOfArray_0()
+        {
+            int exp = 0;
+            int act = ForTest.countUnevenElementsOfArray(ara3);
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void countUnevenElementsOfArray_Empty()
+        {
+            int exp = 0;
+            int act = ForTest.countUnevenElementsOfArray(araEmpty);
+            Assert.AreEqual(exp, act);
+        }
+        // bubbleArray
+        /* [TestMethod]
+         public void bubbleArray_Empty()
+         {
+             int exp = 0;
+             int [] act = ForTest.bubbleArray(araEmpty);
+             Assert.AreEqual(exp, act);
+         }
+         */
+        [TestMethod]
+        public void bubbleArray1()
+        {
+            int [] bubbleAra = ForTest.bubbleArray(ara);
+            for (int i = 0; i > ara.Length-1; i++)
+            {
+                Boolean exp = true;
+                Boolean act = (bubbleAra[i]<bubbleAra[i+1]);
+                Assert.AreEqual(exp, act);
+            }
+        }
+        [TestMethod]
+        public void bubbleArray2()
+        {
+            int[] bubbleAra = ForTest.bubbleArray(ara2);
+            for (int i = 0; i > ara.Length - 1; i++)
+            {
+                Boolean exp = true;
+                Boolean act = (bubbleAra[i] < bubbleAra[i + 1]);
+                Assert.AreEqual(exp, act);
+            }
+        }
+        [TestMethod]
+        public void bubbleArray3()
+        {
+            int[] bubbleAra = ForTest.bubbleArray(ara3);
+            for (int i = 0; i > ara.Length - 1; i++)
+            {
+                Boolean exp = true;
+                Boolean act = (bubbleAra[i] < bubbleAra[i + 1]);
+                Assert.AreEqual(exp, act);
+            }
+        }
+        // fromStringToInt
+        [TestMethod]
+        public void fromStringToInt_four_hundred_fifty_four()
+        {
+            int exp = 454;
+            int act = ForTest.fromStringToInt("four hundred fifty four");
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void fromStringToInt_four()
+        {
+            int exp = 4;
+            int act = ForTest.fromStringToInt("four");
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void fromStringToInt_twelve()
+        {
+            int exp = 12;
+            int act = ForTest.fromStringToInt("twelve");
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void fromStringToInt_twenty()
+        {
+            int exp = 20;
+            int act = ForTest.fromStringToInt("twenty");
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void fromStringToInt_word()
+        {
+            int exp = 0;
+            int act = ForTest.fromStringToInt("word");
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void fromStringToInt_word_word()
+        {
+            int exp = 0;
+            int act = ForTest.fromStringToInt("word word");
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void fromStringToInt_word_word_word()
+        {
+            int exp = 0;
+            int act = ForTest.fromStringToInt("word word word");
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void fromStringToInt_word_word_word_word()
+        {
+            int exp = 0;
+            int act = ForTest.fromStringToInt("word word word word");
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void fromStringToInt_four_hundred()
+        {
+            int exp = 400;
+            int act = ForTest.fromStringToInt("four hundred");
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void fromStringToInt_thirty_two()
+        {
+            int exp = 32;
+            int act = ForTest.fromStringToInt("thirty two");
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void fromStringToInt_one_hundred_thirty()
+        {
+            int exp = 130;
+            int act = ForTest.fromStringToInt("one hundred thirty");
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void fromStringToInt_Big_Letter_One_hundred_thirty()
+        {
+            int exp = 0;
+            int act = ForTest.fromStringToInt("One hundred thirty");
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void fromStringToInt_five_hundred_five()
+        {
+            int exp = 505;
+            int act = ForTest.fromStringToInt("five hundred five");
+            Assert.AreEqual(exp, act);
+        }
+        //distanceOfPoints
+        [TestMethod]
+        public void distanceOfPoints_2_2_2_2()
+        {
+            double exp = 0;
+            double act = ForTest.distanceOfPoints(2,2,2,2);
+            Assert.AreEqual(exp, act);
+        }
+        [TestMethod]
+        public void distanceOfPoints_min2_2_2_2()
+        {
+            double exp = 4;
+            double act = ForTest.distanceOfPoints(-2, 2, 2, 2);
+            Assert.AreEqual(exp, act);
+        }
+        /*
+         * [TestMethod]
+        public void distanceOfPoints_min2_min2_2_2()
+        {
+            double exp = 5.65685424949238;
+            double act = ForTest.distanceOfPoints(-2, -2, 2, 2);
+            Assert.AreEqual(exp, act);
+        }
+        */
+
+
+    }
+}
